@@ -23,3 +23,5 @@ const user1 = new User ({
     email : "alpha@gmail.com",
     age : 56,
 });
+
+user1.save();
