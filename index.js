@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-User.deleteMany({age : 56}).then((res) => {
+User.findByIdAndDelete('665855d892daf663f6a6cd28').then((res) => {
     console.log(res);
 }).catch ((err)=> {
     console.log(err);
