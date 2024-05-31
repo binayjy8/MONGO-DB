@@ -18,11 +18,17 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-User.findOneAndUpdate({name : "Gama"}, {age: 26}, {new: true}).then((res) => {
+User.deleteOne({name : "Gama"}).then((res) => {
     console.log(res);
-}).catch((err) => {
+}).catch ((err)=> {
     console.log(err);
 });
+
+// User.findOneAndUpdate({name : "Gama"}, {age: 26}, {new: true}).then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// });
 
 // User.findById('66585243e73b17214837eb5b').then((res) =>{
 //     console.log(res);
