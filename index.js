@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-User.updateOne({name : "Elleya"}, {age: 16}).then((res) => {
+User.updateOne({age : {$gt: 40}}, {age: 56}).then((res) => {
     console.log(res);
 }).catch((err) => {
     console.log(err);
