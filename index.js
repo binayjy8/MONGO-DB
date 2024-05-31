@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-User.findOneAndUpdate({name : "Gill"}, {age: 24}, {new: true}).then((res) => {
+User.findOneAndUpdate({name : "Gama"}, {age: 26}, {new: true}).then((res) => {
     console.log(res);
 }).catch((err) => {
     console.log(err);
