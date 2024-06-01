@@ -20,6 +20,7 @@ const bookSchema = new mongoose.Schema ({
     },
     price : {
         type : Number,
+        min : 0,
     },
     discount : {
         type : Number,
@@ -34,7 +35,8 @@ const bookSchema = new mongoose.Schema ({
 
 const Book = mongoose.model("Book", bookSchema);
 
-Book.findByIdAndUpdate("665b2e9718badc0866d0a2fe", {price : -300}).then((res)=>{
+Book.findByIdAndUpdate("665b2e9718badc0866d0a2fe",
+{price : -200}, {runValidators: true}).then((res)=>{
     console.log(res);
 }).catch((err)=>{
     console.log(err);
