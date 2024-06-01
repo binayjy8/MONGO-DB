@@ -20,7 +20,7 @@ const bookSchema = new mongoose.Schema ({
     },
     price : {
         type : Number,
-        min : 0,
+        min : [0, "price is too low fo Amazon selling"],
     },
     discount : {
         type : Number,
