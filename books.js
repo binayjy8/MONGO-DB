@@ -29,6 +29,7 @@ const bookSchema = new mongoose.Schema ({
         type : String,
         enum : ["fiction", "non-fiction"],
     },
+    genre : [String],
 });
 
 const Book = mongoose.model("Book", bookSchema);
