@@ -35,9 +35,9 @@ const bookSchema = new mongoose.Schema ({
 const Book = mongoose.model("Book", bookSchema);
 
 let book1 = new Book({
-    title : "Marvel",
-    price : 700,
-    category : "fiction",
+    title : "Marvel v2",
+    price : 300,
+    genre : ["comics", "superheros", "fiction"],
 });
 
 book1.save().then((res) => {
