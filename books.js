@@ -26,9 +26,9 @@ const bookSchema = new mongoose.Schema ({
 const Book = mongoose.model("Book", bookSchema);
 
 let book1 = new Book({
-    title : "Mathematics XII",
-    author : "RD Sharma",
-    price : 1100,
+    title : "The Rabbit",
+    author : "Mr Binay",
+    price : "7000",
 });
 
 book1.save().then((res) => {
